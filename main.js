@@ -1,25 +1,57 @@
-let data = [9,45,2,8,45,23,7,0,11,41,77];
+let data = [60,30,10,67,40];
+let newEl = 70;
+let position = 4;
 
-// for(let i = 0; i < data.length; i++){
-//     document.write(`array ${i} is ${data[i]} <br>`)
+console.log("data length : ", data.length);
+
+for (let i = data.length - 1; i >= 0; i--){
+    console.log(i)
+    if(i >= position){
+        data[i+1] = data[i]
+        if(i == position){
+            data[i] = newEl
+        }
+    }
+   console.log(`index ${i} of number ${data[i]}`)
+}
+
+// for (let i = data.length - 1; i>=0;i--){
+//     console.log(i)
+//     if(i >= position){
+//         data[i+1]=data[i];
+//         if(i == position){
+//             data[i] = newEl
+//         }
+//     }
 // }
 
-// let x = 0;
-// document.writeln(data[x])
+console.warn(data)
 
-function getElement(){
-    let el = document.getElementById('element').value
-    isEl = parseInt(el);
+function insertEl(){
+let data = [60,30,10,67,40];
+let newEl = document.getElementById('newEl').value;
+let position = document.getElementById('position').value;
 
-    if(isNaN(el)){
-        alert("Validation failed")
-        return;
+
+for (let i = data.length - 1; i >= 0; i--){
+
+    if(i >= position){
+        data[i+1] = data[i]
+        if(i == position){
+            data[i] = parseInt(newEl)
+        }
     }
 
-    if(isEl < 0 || el >= data.length){
-        alert("Validation failed")
-        return;
-    }
-
-    alert(data[isEl]);
 }
+
+console.warn(data)
+
+}
+
+const arr = [10,22,35,49]
+
+arr.splice(1,0,300)
+
+console.log(arr)
+
+
