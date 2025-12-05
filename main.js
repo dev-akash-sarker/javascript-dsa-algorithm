@@ -1,57 +1,32 @@
-let data = [60,30,10,67,40];
-let newEl = 70;
-let position = 4;
+// let data = [30,20,45,76,20,80]
 
-console.log("data length : ", data.length);
+// let position = document.getElementById('position').value;
 
-for (let i = data.length - 1; i >= 0; i--){
-    console.log(i)
-    if(i >= position){
-        data[i+1] = data[i]
-        if(i == position){
-            data[i] = newEl
-        }
-    }
-   console.log(`index ${i} of number ${data[i]}`)
-}
+// // for (let i = 3 ; i < data.length - 1;i++){
+// //     console.log(data[i])
+// //     data[i] = data[i+1]
+// // }
 
-// for (let i = data.length - 1; i>=0;i--){
-//     console.log(i)
-//     if(i >= position){
-//         data[i+1]=data[i];
-//         if(i == position){
-//             data[i] = newEl
-//         }
-//     }
+// // console.log(data)
+
+// for (let i = position; i < data.length - 1 ; i++){
+//     console.log(data[i])
+//     data[i] = data[i + 1]
 // }
 
-console.warn(data)
+// data.length = data.length - 1
 
-function insertEl(){
-let data = [60,30,10,67,40];
-let newEl = document.getElementById('newEl').value;
-let position = document.getElementById('position').value;
+// console.log(data)
 
+function deleteEl (){
+    let data = [30,20,45,76,20,80]
+    let position = document.getElementById('position').value;
+    position = parseInt(position)
 
-for (let i = data.length - 1; i >= 0; i--){
-
-    if(i >= position){
-        data[i+1] = data[i]
-        if(i == position){
-            data[i] = parseInt(newEl)
-        }
+    for (let i = position; i < data.length - 1; i++){
+        data[i] = data[i+1]
     }
-
+    data.length = data.length - 1
+    console.log(data)
 }
-
-console.warn(data)
-
-}
-
-const arr = [10,22,35,49]
-
-arr.splice(1,0,300)
-
-console.log(arr)
-
 
