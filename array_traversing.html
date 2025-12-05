@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Array Traversing</title>
+    <title>Insert Element in Array</title>
   </head>
   <body>
-    <input type="text" id="element">
-    <button onclick="getElement()">Get Element</button>
-    <script src="./main.js"></script>
+    <input type="text" id="element" placeholder=" plase your index" />
+    <button onclick="travEL()">Detect</button>
+    <script>
+      let data = [9, 45, 2, 8, 45, 23, 7, 0, 11, 41, 77];
+      console.log(data)
+      function travEL() {
+        let el = document.getElementById('element').value;
+        el = parseInt(el);
+
+        if(el < 0 || el >= data.length){
+          alert('Validation failed');
+        } else {
+          alert(data[el])
+        }
+
+        
+      }
+    </script>
   </body>
 </html>
