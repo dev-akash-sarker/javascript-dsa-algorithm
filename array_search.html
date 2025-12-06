@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Searching</title>
+    <script>
+      let data = [20, 30, 40, 50, 60, 70];
+      document.writeln(data);
+      function getSearch() {
+        let index = undefined;
+        let searchValue = document.getElementById("search").value;
+        searchValue = parseInt(searchValue);
+
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] === searchValue) {
+            index = i;
+            break;
+          }
+        }
+        console.log(data[index]);
+      }
+    </script>
+  </head>
+  <body>
+    <br>
+    <input type="text" id="search" />
+    <button onclick="getSearch()">search</button>
+  </body>
+</html>
