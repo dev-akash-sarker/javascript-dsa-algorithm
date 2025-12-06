@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Insert Element in Array</title>
+  </head>
+  <body>
+    <br />
+    <input type="text" value="0" id="position" placeholder="Remove position" />
+    <button onclick="deleteEl()">Insert</button>
+    <!-- <script src="./main.js"></script> -->
+    <script>
+
+  let data = [30,20,45,76,20,80];
+      function deleteEl(){
+    
+      let position = document.getElementById('position').value;
+      position = parseInt(position);
+        for(let i = position; i < data.length - 1; i++){
+          data[i] = data[i+2]
+      
+        }
+
+        data.length = data.length - 1;
+        console.log(data)
+      }
+    </script>
+  </body>
+</html>
